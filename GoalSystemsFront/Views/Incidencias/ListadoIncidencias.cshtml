@@ -1,0 +1,38 @@
+﻿@model  List<GoalSystemsFront.Dtos.IncidenciasListado>
+
+@{
+    ViewData["Title"] = "Lista de incidencias por empleado";
+}
+
+<h2 class="text-center">Incidencias</h2>
+
+<div class="container">
+
+
+    <div class="row">
+        <div class="col-md-12">
+
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>ID</th>                        
+                        <th>Descripción</th>
+                        <th>Nombre Empleado</th>
+                        <th>Fecha Alta</th>
+                    </tr>
+                </thead>
+
+                @foreach (var element in Model)
+                {
+                    <tr>
+                        <td>@element.id</td>
+                        <td>@element.descripcion</td>
+                        <td>@element.nombreEmpleado</td>
+                        <td>@element.fechaAlta</td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </div>
+
+</div>
